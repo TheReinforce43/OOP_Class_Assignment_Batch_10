@@ -117,6 +117,9 @@ if __name__ == "__main__":
     UttaraCarMart.rent_car("Toyota Corolla","Rahim Uddin",100, "2024-06-01", "2024-06-10")
     print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: True
 
+    UttaraCarMart.return_car("Toyota Corolla")
+    print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: False
+
     UttaraCarMart.maintenance_car("Toyota Corolla")
     print(UttaraCarMart.is_maintenance_period("Toyota Corolla"))  # Output: True    
     UttaraCarMart.return_car("Toyota Corolla")
