@@ -114,7 +114,7 @@ class CarRentalSystem:
 if __name__ == "__main__":
     UttaraCarMart = CarRentalSystem("UttaraCarMart") 
     UttaraCarMart.add_car("Toyota Corolla")
-    UttaraCarMart.rent_car("Toyota Corolla","John Doe",100, "2024-06-01", "2024-06-10")
+    UttaraCarMart.rent_car("Toyota Corolla","Rahim Uddin",100, "2024-06-01", "2024-06-10")
     print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: True
 
     UttaraCarMart.maintenance_car("Toyota Corolla")
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     UttaraCarMart.return_car("Toyota Corolla")
     print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: False 
     UttaraCarMart.return_car("Toyota Corolla") 
-    UttaraCarMart.rent_car("Toyota Corolla","Jane Smith",120, "2024-06-11", "2024-06-20")
+    UttaraCarMart.rent_car("Toyota Corolla","Farhan Kabir",120, "2024-06-11", "2024-06-20")
     print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: True
     UttaraCarMart.return_car("Toyota Corolla")
     print(UttaraCarMart.is_rented("Toyota Corolla"))  # Output: False
