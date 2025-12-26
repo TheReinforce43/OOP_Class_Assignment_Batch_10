@@ -80,12 +80,22 @@ class MovieStreamingPlatform:
         recommended_movies = set()
         recommended_movies_title = set()
 
+
         for movie_id in search_history:
-            if movie_id not in watch_history:
+
+            if movie_id not in recommended_movies:
                 recommended_movies.add(movie_id)
 
         for movie_id in rating_history:
-            if movie_id not in watch_history:
+                
+            if movie_id not in recommended_movies:
+           
+                recommended_movies.add(movie_id)
+
+        for movie_id in watch_history:
+                
+            if movie_id not in recommended_movies:
+           
                 recommended_movies.add(movie_id)
 
         for movie_id in recommended_movies:
@@ -167,14 +177,12 @@ if __name__ == "__main__":
 
     
     
-    platform.add_user_search_history("user2", "Mystery")   
+    platform.add_user_search_history("user2", "M")   
     recommendations = platform.user_movie_recommendation("user2")
     
     print(f"Recommended movies for user2: {recommendations}")
 
 
-    
-    platform.add_user_search_history("user1", "Roma")   
 
     recommendations = platform.user_movie_recommendation("user1")
     print(f"Recommended movies for user1: {recommendations}")
