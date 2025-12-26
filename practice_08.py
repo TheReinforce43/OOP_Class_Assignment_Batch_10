@@ -63,6 +63,8 @@ class MovieStreamingPlatform:
             return
 
         user_search_movie = self.return_search_movie_from_platform(search_term)
+
+        # since I need to store multiple searches, I will use update instead of add built-in function
         self.user_search_history[user_id].update(user_search_movie)
 
     # ----------------- RECOMMENDATION -----------------
